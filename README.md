@@ -1,4 +1,7 @@
 ## Usage
+- gitのconfig(以下の2行)を変更
+    - git config --global user.email "norihitoishida@gmail.com" && \
+    - git config --global user.name "norihitoishida" 
 - マシンのCUDAバージョンに合わせて、適宜ベースイメージを変更
     - マシンのCUDAバージョンは`$ nvidia-smi`で確認
     - ベースイメージはNvidiaのDockerhubから探す
