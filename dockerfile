@@ -30,8 +30,8 @@ RUN apt-get update -y && \
 	gcc && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/* && \
-    git config --global user.email "norihitoishida@gmail.com" && \
-    git config --global user.name "norihitoishida" 
+    git config --global user.email "hogehoge@gmail.com" && \
+    git config --global user.name "fugafuga" 
 
 RUN pip3 install --no-cache-dir \
         Pillow \
