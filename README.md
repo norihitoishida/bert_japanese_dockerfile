@@ -1,7 +1,7 @@
 ## Usage
 - gitのconfig(以下の2行)を変更
-    - git config --global user.email "norihitoishida@gmail.com" && \
-    - git config --global user.name "norihitoishida" 
+    - git config --global user.email "hogehoge@gmail.com" && \
+    - git config --global user.name "fugafuga" 
 - マシンのCUDAバージョンに合わせて、適宜ベースイメージを変更
     - マシンのCUDAバージョンは`$ nvidia-smi`で確認
     - ベースイメージはNvidiaのDockerhubから探す
@@ -12,13 +12,13 @@
     - BERT-base_mecab-ipadic-bpe-32k_whole-word-mask.tar.xz
 - Dockerfileと同じディレクトリに入る
 - イメージをビルドする
-    - 例 : `sudo docker build nlp:1.0 .` (最後のピリオドを忘れない様に注意)
+    - 例 : `$ sudo docker build nlp:1.0 .` (最後のピリオドを忘れない様に注意)
 - イメージからコンテナを作る
-    - 例 : `sudo docker run --gpus all -it -p 8888:8888 nlp:1.0`
+    - 例 : `$ sudo docker run --gpus all -it -p 8888:8888 nlp:1.0`
 - jupyter-labを開始
-    - 例 : `jupyter-lab --port=8888 --ip=0.0.0.0 --allow-root`
+    - 例 : `# jupyter-lab --port=8888 --ip=0.0.0.0 --allow-root`
     - `<グローバルIP>:8888`をブラウザで開き、token=hogehogeの部分を入力する
-    - ssh接続する際に `ssh <ユーザ名>@<IP> -L 8888:localhost:8888 -p 2211`でポートフォワーディングしている場合は、jupyter-lab開始時にターミナルに出てくるアドレス`http://127.0.0.1:8888/?token=hogehoge`をそのままブラウザで開けばOK
+    - ssh接続する際に `$ ssh <ユーザ名>@<IP> -L 8888:localhost:8888 -p 2211`でポートフォワーディングしている場合は、jupyter-lab開始時にターミナルに出てくるアドレス`http://127.0.0.1:8888/?token=hogehoge`をそのままブラウザで開けばOK
 - [サンプルコード](https://github.com/cl-tohoku/bert-japanese/blob/master/masked_lm_example.ipynb)を実行して確認
 - torchをインポート後、セルに`torch.cuda.is_available()`と入力して実行し、GPUが有効になっているか確認(TrueならOK)
 
